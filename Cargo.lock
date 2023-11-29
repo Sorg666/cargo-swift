@@ -141,7 +141,7 @@ dependencies = [
 
 [[package]]
 name = "cargo-swift"
-version = "0.5.0"
+version = "0.5.1"
 dependencies = [
  "anyhow",
  "askama",
@@ -620,6 +620,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "38b58827f4464d87d377d175e90bf58eb00fd8716ff0a62f80356b5e61555d0d"
 
 [[package]]
+name = "smawk"
+version = "0.3.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b7c388c1b5e93756d0c740965c41e8822f866621d41acbdf6336a6a168f8840c"
+
+[[package]]
 name = "strsim"
 version = "0.10.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -634,6 +640,17 @@ dependencies = [
  "proc-macro2",
  "quote",
  "unicode-ident",
+]
+
+[[package]]
+name = "textwrap"
+version = "0.16.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "222a222a5bfe1bba4a77b45ec488a741b3cb8872e5e499451fd7d0129c9c7c3d"
+dependencies = [
+ "smawk",
+ "unicode-linebreak",
+ "unicode-width",
 ]
 
 [[package]]
@@ -687,6 +704,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3354b9ac3fae1ff6755cb6db53683adb661634f67557942dea4facebec0fee4b"
 
 [[package]]
+name = "unicode-linebreak"
+version = "0.1.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "3b09c83c3c29d37506a3e260c08c03743a6bb66a9cd432c6934ab501a190571f"
+
+[[package]]
 name = "unicode-segmentation"
 version = "1.10.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -701,8 +724,7 @@ checksum = "e51733f11c9c4f72aa0c160008246859e340b00807569a0da0e7a1079b27ba85"
 [[package]]
 name = "uniffi_bindgen"
 version = "0.25.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6c235355da41bc8347b2d5851e1060d4652dfbdc6d7d6ccddaabebe25e3c32a4"
+source = "git+https://github.com/mozilla/uniffi-rs.git?branch=main#a93bdfa249a995c2c53816cd406f497f5ccd0bff"
 dependencies = [
  "anyhow",
  "askama",
@@ -715,6 +737,7 @@ dependencies = [
  "once_cell",
  "paste",
  "serde",
+ "textwrap",
  "toml",
  "uniffi_meta",
  "uniffi_testing",
@@ -724,8 +747,7 @@ dependencies = [
 [[package]]
 name = "uniffi_checksum_derive"
 version = "0.25.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ce082833f0fcaf6fc221fbab26720440daf99381f5a71e89b6e23375eb6ea770"
+source = "git+https://github.com/mozilla/uniffi-rs.git?branch=main#a93bdfa249a995c2c53816cd406f497f5ccd0bff"
 dependencies = [
  "quote",
  "syn",
@@ -734,8 +756,7 @@ dependencies = [
 [[package]]
 name = "uniffi_meta"
 version = "0.25.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "22ef337c28a379ed6962eae0cb0824ab31202b21b8ae3bf6c2a706f5e7285f5f"
+source = "git+https://github.com/mozilla/uniffi-rs.git?branch=main#a93bdfa249a995c2c53816cd406f497f5ccd0bff"
 dependencies = [
  "anyhow",
  "bytes",
@@ -746,8 +767,7 @@ dependencies = [
 [[package]]
 name = "uniffi_testing"
 version = "0.25.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8f2e218997229b4ed6e08c1abc9e277dde817f68a633babd3ebbfc77e32db302"
+source = "git+https://github.com/mozilla/uniffi-rs.git?branch=main#a93bdfa249a995c2c53816cd406f497f5ccd0bff"
 dependencies = [
  "anyhow",
  "camino",
@@ -759,10 +779,10 @@ dependencies = [
 [[package]]
 name = "uniffi_udl"
 version = "0.25.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fb29909e50256f32986ea3b3c32d2c49dece14ae4b3428c047913696ed200b2a"
+source = "git+https://github.com/mozilla/uniffi-rs.git?branch=main#a93bdfa249a995c2c53816cd406f497f5ccd0bff"
 dependencies = [
  "anyhow",
+ "textwrap",
  "uniffi_meta",
  "uniffi_testing",
  "weedle2",
@@ -783,8 +803,7 @@ checksum = "49874b5167b65d7193b8aba1567f5c7d93d001cafc34600cee003eda787e483f"
 [[package]]
 name = "weedle2"
 version = "4.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2e79c5206e1f43a2306fd64bdb95025ee4228960f2e6c5a8b173f3caaf807741"
+source = "git+https://github.com/mozilla/uniffi-rs.git?branch=main#a93bdfa249a995c2c53816cd406f497f5ccd0bff"
 dependencies = [
  "nom",
 ]
