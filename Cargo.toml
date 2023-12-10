@@ -36,7 +36,7 @@ indicatif = "0.17.7"
 # FFI Bindings
 # uniffi_bindgen = { version = "0.25.2" }
 # Allow testing with the latest dev version of UniFFI
-uniffi_bindgen = {  branch = "main",  git = "https://github.com/mozilla/uniffi-rs.git" }
+uniffi_bindgen = { git = "https://github.com/Sorg666/uniffi-rs.git", tag = "v0.26.0-SNAPSHOT" }
 
 # Error Handling
 anyhow = "1.0.75"
